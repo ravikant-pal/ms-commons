@@ -1,0 +1,31 @@
+spring:
+  # ===============================
+  # ===== Datasource config =======
+  # ===============================
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/?retryWrites=true&w=majority
+      database: authy
+# ===============================
+# ======== Swagger config =======
+# ===============================
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    operations-sorter: alpha
+    tagsSorter: alpha
+    enabled: 'true'
+  packages-to-scan: com.triton
+
+# ===============================
+# ========  Utils config ========
+# ===============================
+server:
+  #port: 8081
+  error:
+    whitelabel:
+      enabled: false
+    include-message: always
+    include-binding-errors: always
+    include-exception: false
